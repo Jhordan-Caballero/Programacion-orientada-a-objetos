@@ -17,7 +17,6 @@
     </properties>
     
     <build>
-<<<<<<< HEAD
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -44,41 +43,4 @@
             </plugin>
         </plugins>
     </build>
-=======
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.11.0</version>
-            <configuration>
-             <release>8</release>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.1.0</version>
-            <configuration>
-                <archive>
-                    <manifestEntries>
-                        <Main-Class>com.mycompany.programacion_orientada_a_objetos.Programacion_orientada_a_objetos</Main-Class>
-                    </manifestEntries>
-                </archive>
-            </configuration>
-        </plugin>
-                  <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.1.0</version>
-            <configuration>
-                <archive>
-                    <manifestEntries>
-                        <Main-Class>com.mycompany.programacion_orientada_a_objetos.Programacion_orientada_a_objetos</Main-Class>
-                    </manifestEntries>
-                </archive>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
->>>>>>> 1a8d94005db44b66cb73c793132cdf1f27c18e0f
 </project>
