@@ -30,4 +30,13 @@ public class Avion {
        public String getEmpresa (){
            return empresa;
        }
+       @Override
+    public String toString() {
+        return "Avion{" +
+               "modelo='" + modelo + '\'' +
+               ", año=" + año +
+               ", empresa='" + empresa + '\'' +
+               '}';
+    }
+    
 }
