@@ -20,7 +20,7 @@ public class Avion {
     private String empresa;
 
     Avion(String boeing_747, int i, String sky) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
        public void setModelo (String modelo){
