@@ -1,7 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+
 package com.mycompany.programacion_orientada_a_objetos;
 
 import java.util.Objects;
@@ -13,19 +11,18 @@ import java.util.Objects;
 public class Avion {
 
     static String getTotalAviones() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        return null;
+        
     }
     private String modelo;
     private int año;
     private String empresa;
 
-    Avion(String boeing_747, int i, String boeing) {
+    Avion(String boeing_747, int i, String sky) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    Avion(Avion avion1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
        public void setModelo (String modelo){
            this.modelo = modelo;
        }
@@ -63,24 +60,22 @@ public class Avion {
                Objects.equals(empresa, avion.empresa);
     }
     
-    // Sobrescritura de hashCode()
+  
     @Override
     public int hashCode() {
         return Objects.hash(modelo, año, empresa);
     }
     
-    // Método para verificar si el avión es moderno
+  
     public boolean esModerno() {
         return año >= 2000;
     }
     
-    // Método para mostrar antigüedad
+
     public int calcularAntiguedad(int añoActual) {
         return añoActual - año;
     }
 
-    boolean obtenerInfoCompleta() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 }
 

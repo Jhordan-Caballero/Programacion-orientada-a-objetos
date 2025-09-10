@@ -4,56 +4,70 @@
 
 package com.mycompany.programacion_orientada_a_objetos;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /**
  *
  * @author jcaba
  */
 public class Programacion_orientada_a_objetos {
-
+    private static List<Avion> aviones = new ArrayList<>();
+    private static Scanner scanner = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        Avion avion1 = new Avion();
-        avion1.setModelo("Boeing 747");
-        avion1.setAño(2018);
-        avion1.setEmpresa("Sky");
+        inicializarAviones();
+        mostrarMenu();
+    }
+    
+    private static void inicializarAviones() {
+        aviones.add(new Avion("Boeing 747", 2018, "Sky"));
+        aviones.add(new Avion("Boeing 737", 2020, "Latam"));
+        aviones.add(new Avion("Airbus A320", 2015, "Avianca"));
+        aviones.add(new Avion("Airbus A380", 2013, "Sky"));
+        aviones.add(new Avion("Concorde", 2019, "Latam"));
+    }
+    
+    private static void mostrarMenu() {
+        int opcion;
         
-        System.out.println("Modelo: " + avion1.getModelo());
-        System.out.println("Año: " + avion1.getAño());
-        System.out.println("Empresa: " + avion1.getEmpresa());
+        do {
+            System.out.println("\n=== MENÚ PRINCIPAL ===");
+            System.out.println("1. Mostrar aviones");
+            System.out.println("2. Salir");
+            System.out.print("Seleccione una opción: ");
+            
+            try {
+                opcion = Integer.parseInt(scanner.nextLine());
+                
+                switch (opcion) {
+                    case 1:
+                        mostrarAviones();
+                        break;
+                    case 2:
+                        System.out.println("Hasta luego");
+                        break;
+                    default:
+                        System.out.println("Opción no válida. Intente nuevamente.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor, ingrese un número válido.");
+                opcion = 0;
+            }
+            
+        } while (opcion != 2);
+    }
+    
+    private static void mostrarAviones() {
+        System.out.println("\n=== LISTA DE AVIONES ===");
         
-        Avion avion2 = new Avion();
-        avion2.setModelo("Boeing 737");
-        avion2.setAño(2020);
-        avion2.setEmpresa("Latam");
-        
-        System.out.println("Modelo: " + avion2.getModelo());
-        System.out.println("Año: " + avion2.getAño());
-        System.out.println("Empresa: " + avion2.getEmpresa());
-        
-        Avion avion3 = new Avion();
-        avion3.setModelo("Airbus A320");
-        avion3.setAño(2015);
-        avion3.setEmpresa("Avianca");
-        
-        System.out.println("Modelo: " + avion3.getModelo());
-        System.out.println("Año: " + avion3.getAño());
-        System.out.println("Empresa: " + avion3.getEmpresa());
-        
-        Avion avion4 = new Avion();
-        avion4.setModelo("Airbus A380");
-        avion4.setAño(2013);
-        avion4.setEmpresa("Sky");
-        
-        System.out.println("Modelo: " + avion4.getModelo());
-        System.out.println("Año: " + avion4.getAño());
-        System.out.println("Empresa: " + avion4.getEmpresa());
-        
-        Avion avion5 = new Avion();
-        avion5.setModelo("Concorde");
-        avion5.setAño(2019);
-        avion5.setEmpresa("Latam");
-        
-        System.out.println("Modelo: " + avion5.getModelo());
-        System.out.println("Año: " + avion5.getAño());
-        System.out.println("Empresa: " + avion5.getEmpresa());
+        if (aviones.isEmpty()) {
+            System.out.println("No hay aviones registrados.");
+        } else {
+            for (int i = 0; i < aviones.size(); i++) {
+                System.out.println((i + 1) + ". " + aviones.get(i));
+            }
+        }
     }
 }

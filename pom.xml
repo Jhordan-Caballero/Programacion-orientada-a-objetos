@@ -27,7 +27,18 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-             <plugin>
+            
+            <!-- Plugin para ejecutar directamente -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.mycompany.programacion_orientada_a_objetos.Programacion_orientada_a_objetos</mainClass>
+                </configuration>
+            </plugin>
+            
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.6.0</version>
