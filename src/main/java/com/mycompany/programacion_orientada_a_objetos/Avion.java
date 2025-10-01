@@ -19,8 +19,12 @@ public class Avion {
     private int año;
     private String empresa;
 
+<<<<<<< HEAD
     Avion(String modelo, int año, String empresa1
     ) {
+=======
+    Avion(String modelo, int año, String empresa) {
+>>>>>>> 58df784c0ee46ef3af421c07c588bb830d8bb670
         
     }
 

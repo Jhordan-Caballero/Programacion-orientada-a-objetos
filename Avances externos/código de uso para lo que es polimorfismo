@@ -1,0 +1,83 @@
+interface Avion {
+    void despegar();   
+    void aterrizar();  
+    void volar();       
+}
+
+
+class AvionComercial implements Avion {
+    private String modelo;
+    private int capacidad;
+    private String aerolinea;
+
+  
+    public AvionComercial(String modelo, int capacidad, String aerolinea) {
+        this.modelo = modelo;
+        this.capacidad = capacidad;
+        this.aerolinea = aerolinea;
+    }
+
+    @Override
+    public void despegar() {
+        System.out.println(modelo + " de " + aerolinea + " esta despegando con " + capacidad + " pasajeros.");
+    }
+
+    @Override
+    public void aterrizar() {
+        System.out.println(modelo + " de " + aerolinea + " ha aterrizado.");
+    }
+
+    @Override
+    public void volar() {
+        System.out.println(modelo + " de " + aerolinea + " esta volando a gran altura.");
+    }
+}
+
+
+class AvionMilitar implements Avion {
+    private String modelo;
+    private int capacidad;
+    private String pais;
+
+   
+    public AvionMilitar(String modelo, int capacidad, String pais) {
+        this.modelo = modelo;
+        this.capacidad = capacidad;
+        this.pais = pais;
+    }
+
+    @Override
+    public void despegar() {
+        System.out.println("Avion militar " + modelo + " del pais " + pais + " está despegando.");
+    }
+
+    @Override
+    public void aterrizar() {
+        System.out.println("Avion militar " + modelo + " del pais " + pais + " ha aterrizado.");
+    }
+
+    @Override
+    public void volar() {
+        System.out.println("Avion militar " + modelo + " del pais " + pais + " esta realizando maniobras a alta velocidad.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+  
+        Avion avionComercial = new AvionComercial("Boeing 777", 350, "Delta Airlines");
+        Avion avionMilitar = new AvionMilitar("F-16", 1, "EE. UU.");
+
+        System.out.println("Comercial:");
+        avionComercial.despegar();  
+        avionComercial.volar();    
+        avionComercial.aterrizar();  
+
+        System.out.println();
+
+        System.out.println("Militar:");
+        avionMilitar.despegar();    
+        avionMilitar.volar();       
+        avionMilitar.aterrizar();   
+    }
+}
