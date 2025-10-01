@@ -19,7 +19,8 @@ public class Avion {
     private int año;
     private String empresa;
 
-    Avion(String boeing_747, int i, String sky) {
+    Avion(String modelo, int año, String empresa1
+    ) {
         
     }
 
