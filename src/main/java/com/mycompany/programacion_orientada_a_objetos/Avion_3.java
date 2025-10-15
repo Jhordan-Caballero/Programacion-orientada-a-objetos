@@ -73,6 +73,6 @@ System.out.println("Avion militar despegando con municion" + armamento + "a punt
     }
 @Override 
 public void informacion (){
-System.out.println("Avion turistico tipo = " + tipo + "con munición =  " + armamento );
+System.out.println("Avion turistico tipo = " + tipo + "con municion =  " + armamento );
     }
 }
