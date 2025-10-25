@@ -14,24 +14,29 @@ import java.util.Scanner;
  */
 public class Programacion_orientada_a_objetos {
     public static void main(String[] args) {
-        Avionturistico turistico1 = new Avionturistico("Boeing 737", 180);
-        Avionturistico turistico2 = new Avionturistico("Airbus A320", 150);
         
-        Avionmilitar militar1 = new Avionmilitar("Caza", "Misiles aire-aire");
-        Avionmilitar militar2 = new Avionmilitar("Transporte", "Tropas y equipo");
+        List<Lista_java> aviones = new ArrayList<>();
+        aviones.add(new Lista_java("azul", 4));
+        aviones.add(new Lista_java("rojo", 8));
+        aviones.add(new Lista_java("verde",5));
+        aviones.add(new Lista_java("blanco", 3));
+        aviones.add(new Lista_java("negro", 4));
+        aviones.add(new Lista_java("dorado", 8));
+        aviones.add(new Lista_java("rosado", 2));
+        aviones.add(new Lista_java("amarillo", 10));
+        aviones.add(new Lista_java("violeta", 4));
+        aviones.add(new Lista_java("plomo", 7));
+        aviones.add(new Lista_java("naranja", 3));
+        aviones.add(new Lista_java("celeste", 8));
         
-        Avionprivado privado1 = new  Avionprivado ("esa XYZ", "Nueva York");
-        Avionprivado privado2 = new Avionprivado("Familiar Perez", "Paris");
-  
-        Avion_3 [] aviones = {turistico1, turistico2, militar1, militar2, privado1, privado2};                                                                                   
+        aviones.remove(2);
         
-        System.out.println("=== DEMOSTRACION DE AVIONES ===\n");
+        Lista_java primerAvion = aviones.get(0);
+        System.out.println("Primer avion: " + primerAvion.getClass());
         
-        // Probar todos los métodos
-        for (Avion_3 avion : aviones) {
-            avion.informacion();
-            avion.despegar();
-            avion.aterrizar();
-            System.out.println("---");
-
-}}}
+        for (int i = 0; i< aviones.size(); i++){
+        Lista_java avion = aviones.get(i);
+        System.out.println("Indice " + i + avion.color()+ avion.tamaño);
+    }
+    }
+}

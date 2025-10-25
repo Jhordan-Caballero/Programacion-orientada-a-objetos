@@ -9,7 +9,7 @@ package com.mycompany.programacion_orientada_a_objetos;
  * @author LAB-USR-AREQUIPA
  */
 
-    abstract class Avion_1 {
+   abstract class Avion_1 {
     public String modelo;
     public int capacidad;
 
