@@ -55,10 +55,10 @@ package com.mycompany.programacion_orientada_a_objetos;
     System.out.println("Avion a punto de aterrizar al destino " + destino);
         }   
     }
-    class Avionmilitar implements Avion_3 {
+    class AvionMilitar implements Avion_3 {
         private String tipo;
         private String armamento;
-        public Avionmilitar (String tipo, String armamento){
+        public AvionMilitar (String tipo, String armamento){
             this.tipo = tipo;
             this.armamento= armamento;         
         }

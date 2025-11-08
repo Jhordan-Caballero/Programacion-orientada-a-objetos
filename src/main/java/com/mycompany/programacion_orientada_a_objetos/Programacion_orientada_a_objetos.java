@@ -37,7 +37,7 @@ public class Programacion_orientada_a_objetos {
         for (int i = 0; i< aviones.size(); i++){
         Lista_java avion = aviones.get(i);
         System.out.println("Indice " + i + avion.color()+ avion.tamaño);
-        Hangar<Avion_1> hangar1 = new Hangar<>(new AvionMilitar("F-22 Raptor", 32, "eso tilin"));
+        Hangar<Avion_1> hangar1 = new Hangar<>(new AvionMilitar("F-22 Raptor", "eso tilin"));
         hangar1.mostrarAvion();
         hangar1.mostrarInformacionExtra("Tiene misiles guiados y radar furtivo");
 
